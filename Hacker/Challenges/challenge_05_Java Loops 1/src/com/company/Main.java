@@ -1,12 +1,30 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 	// write your code here
 
-        //Saimer Nievs continue here
+        //initiated an instance of buffer reader
+        BufferedReader buff =  new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("JAVA Loops 1 Site continue in the morning");
+        //Input first number to multiply
+        int numberToMultiply = Integer.parseInt(buff.readLine().trim());
+
+        //initiate a for loop
+
+        for(int i = 1; i <= 10; i++){
+
+            int product = numberToMultiply * i;
+            System.out.println(numberToMultiply + " x " + i  + " = " + product);
+
+        }
+
+
+        buff.close();
     }
 }
