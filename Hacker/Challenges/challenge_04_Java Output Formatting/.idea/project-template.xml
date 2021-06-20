@@ -1,3 +1,9 @@
 <template>
   <input-field default="com.company">IJ_BASE_PACKAGE</input-field>
 </template>
+
+<dependency>
+<groupId>com.google.guava</groupId>
+<artifactId>guava</artifactId>
+<version>27.0-jre</version>
+</dependency>
