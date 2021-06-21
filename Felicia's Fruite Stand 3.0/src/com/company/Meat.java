@@ -7,7 +7,6 @@ public class Meat extends Product{
         setName("");
         setPrice(0.00);
         setStartingQuantity(0);
-
     }
 
     public Meat(String name,double price, int quantity){
@@ -15,5 +14,4 @@ public class Meat extends Product{
         setPrice(price);
         setStartingQuantity(quantity);
     }
-
 }

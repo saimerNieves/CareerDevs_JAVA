@@ -4,7 +4,6 @@ import java.text.DecimalFormat;
 
 public class Product {
 
-
     //PROPERTIES ===================================================================================
     private double price;
     private String name;
@@ -13,14 +12,14 @@ public class Product {
     private double gainedRevenue;
     private double remainingRevenue;
 
-
+    //Decimal pattern to display dollars value
     private static DecimalFormat df = new DecimalFormat("0.00");
 
     //Over ride toString() method to print info
     @Override
     public String toString(){
         return (
-                this.name + " | Cost: " + this.price + " | totalQuatity: " + this.totalQuantity + " | remaining Revenue : "  + df.format(this.remainingRevenue) + " | Gained Revenue : "  + df.format(this.gainedRevenue)
+                this.name + " | Cost: $" + this.price + " | totalQuatity: " + this.totalQuantity + " | remaining Revenue : $"  + df.format(this.remainingRevenue) + " | Gained Revenue : $"  + df.format(this.gainedRevenue)
                 );
     }
 
@@ -29,7 +28,13 @@ public class Product {
 
     //Setters and getters ========================================================================================
     public void setPrice(double price){
-        this.price = price;
+        if(price > 0){
+            this.price = price;
+        }else{
+
+            System.out.println("\nPlease type a price greater than 0\n");
+        }
+
     }
 
     public Double getPrice(){
@@ -37,7 +42,13 @@ public class Product {
     }
 
     public void setName(String name){
-        this.name = name;
+        if(name.length() > 0){
+            this.name = name;
+        }else{
+            this.name = null;
+            System.out.println("\nPlease type a name greater than 0 characters\n");
+        }
+
     }
 
     public String getName(){
@@ -47,19 +58,22 @@ public class Product {
 
 
 
-
-
     //METHODS ================================================================
     public void setStartingQuantity(int startingQuantity){
 
-        this.startingQuantity = startingQuantity;
+        if(startingQuantity > 0){
 
-        this.totalQuantity = this.startingQuantity;
+            this.startingQuantity = startingQuantity;
 
-        this.gainedRevenue = 0.00;
+            this.totalQuantity = this.startingQuantity;
 
-        this.remainingRevenue = (this.startingQuantity * this.price) ;
+            this.gainedRevenue = 0.00;
 
+            this.remainingRevenue = (this.startingQuantity * this.price);
+
+        }else{
+            System.out.println("\nPlease insert a quantity greater than 0\n");
+        }
     }
 
     public void makeSale(int quantity){
@@ -69,34 +83,24 @@ public class Product {
             this.gainedRevenue += this.price * quantity;
             this.remainingRevenue-= this.price * quantity;
         }else {
-            System.out.println("Low Quantity Can't make Sale !");
+            System.out.println("Low Quantity: Can't make Sale ! We have Stocked :" + this.totalQuantity + ", and you requested : " + quantity );
         }
-
     }
 
     public void makeReturn(int quantity){
-        this.totalQuantity += quantity;
-        this.gainedRevenue -= this.price * quantity;
-        this.remainingRevenue += this.price * quantity;
+        if((this.gainedRevenue - ( this.price * quantity)) >= 0){
+
+            this.totalQuantity += quantity;
+            this.gainedRevenue -= this.price * quantity;
+            this.remainingRevenue += this.price * quantity;
+
+        }else{
+            System.out.println("Returning TOO MANY items we didnt sell");
+        }
     }
 
     public int getTotalQuantity(){
         return this.totalQuantity;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

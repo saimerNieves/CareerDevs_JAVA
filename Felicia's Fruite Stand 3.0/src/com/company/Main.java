@@ -1,7 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.Locale;
+
 
 public class Main {
 
@@ -70,7 +70,6 @@ public class Main {
 	// write your code here
 
         //Create a product list
-
         ArrayList<Product> product_List = new ArrayList<>();
 
         //3 different fruits
@@ -98,18 +97,27 @@ public class Main {
 
 
 
+
+        //OUTPUT TESTING SECTION
         displayProducts(product_List);
 
-        ribs.makeSale(3);
+        System.out.println("\n===================================");
 
-        ribs.makeReturn(3);
+        displayProducts(product_List,5);
+        ribs.makeSale(2); //made sale
+        System.out.println("\n===================================");
+        ribs.makeReturn(1); //made a return
+        displayProducts(product_List,5);
 
-        System.out.println("===================================");
-//
-//        displayProducts(product_List,2);
 
-        displayProducts(product_List);
+        System.out.println(  ribs.getTotalQuantity()); // displays method the shows totalQuantity
 
-//        System.out.println(product_List.get(0).getName());
+        System.out.println("\n===================================");
+        displayProducts(product_List, "meat"); //shows all items which are instance of Meat
+
+
+        System.out.println("\n===================================");
+        displayProducts(product_List, "Fruit"); //shows all items which are instance of Fruit
+
     }
 }
