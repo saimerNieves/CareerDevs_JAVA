@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 public class Product {
 
 
+    //PROPERTIES ===================================================================================
     private double price;
     private String name;
     private int totalQuantity;
@@ -15,6 +16,7 @@ public class Product {
 
     private static DecimalFormat df = new DecimalFormat("0.00");
 
+    //Over ride toString() method to print info
     @Override
     public String toString(){
         return (
@@ -25,7 +27,7 @@ public class Product {
 
 
 
-    //Setters and getters
+    //Setters and getters ========================================================================================
     public void setPrice(double price){
         this.price = price;
     }
@@ -33,9 +35,6 @@ public class Product {
     public Double getPrice(){
         return this.price;
     }
-
-
-
 
     public void setName(String name){
         this.name = name;
@@ -47,6 +46,10 @@ public class Product {
 
 
 
+
+
+
+    //METHODS ================================================================
     public void setStartingQuantity(int startingQuantity){
 
         this.startingQuantity = startingQuantity;
@@ -61,9 +64,14 @@ public class Product {
 
     public void makeSale(int quantity){
 
-        this.totalQuantity -= quantity;
-        this.gainedRevenue += this.price * quantity;
-        this.remainingRevenue-= this.price * quantity;
+        if((this.totalQuantity - quantity) >= 0){
+            this.totalQuantity -= quantity;
+            this.gainedRevenue += this.price * quantity;
+            this.remainingRevenue-= this.price * quantity;
+        }else {
+            System.out.println("Low Quantity Can't make Sale !");
+        }
+
     }
 
     public void makeReturn(int quantity){

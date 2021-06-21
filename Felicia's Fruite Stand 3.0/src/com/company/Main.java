@@ -59,10 +59,18 @@ public class Main {
 
     }
 
+    public static void displayProducts(ArrayList product_list, int i){
+
+        System.out.println( product_list.get(i));
+    }
+
+
+
     public static void main(String[] args) {
 	// write your code here
 
         //Create a product list
+
         ArrayList<Product> product_List = new ArrayList<>();
 
         //3 different fruits
@@ -70,16 +78,17 @@ public class Main {
         Fruit apple = new Fruit("Apple",1.50,20);
         Fruit kiwi = new Fruit("kiwi",0.99,5);
 
+
         //3  different meats
         Meat steak = new Meat("Steak",5.99,2);
         Meat chicken = new Meat("Chicken",2.99,8);
         Meat ribs = new Meat("Ribs",4.99,4);
 
+
         //adding all fruits to arrayList
         product_List.add(banana);
         product_List.add(apple);
         product_List.add(kiwi);
-
 
 
         //adding all meats to arrayList
@@ -89,20 +98,17 @@ public class Main {
 
 
 
-//        displayProducts(product_List);
-//        System.out.println(banana);
-//
-//        banana.makeSale(7);
-//
-//        System.out.println(banana);
-//
-//        banana.makeReturn(7);
-//
-//        System.out.println(banana);
+        displayProducts(product_List);
 
-//        System.out.println("===================================");
+        ribs.makeSale(3);
+
+        ribs.makeReturn(3);
+
+        System.out.println("===================================");
 //
-        displayProducts(product_List,"Meat");
+//        displayProducts(product_List,2);
+
+        displayProducts(product_List);
 
 //        System.out.println(product_List.get(0).getName());
     }
