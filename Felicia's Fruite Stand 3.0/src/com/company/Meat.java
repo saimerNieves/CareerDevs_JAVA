@@ -1,17 +1,15 @@
 package com.company;
-
+//AS SE Saimer Nieves - CareerDevs Student
 public class Meat extends Product{
 
     //Contructors
     public Meat(){
-        setName("");
-        setPrice(0.00);
-        setStartingQuantity(0);
+        super();
     }
 
     public Meat(String name,double price, int quantity){
-        setName(name);
-        setPrice(price);
-        setStartingQuantity(quantity);
+        super(name, price, quantity);
     }
 }
+
+//AS SE Saimer Nieves - CareerDevs Student

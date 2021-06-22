@@ -1,5 +1,5 @@
 package com.company;
-
+//AS SE Saimer Nieves - CareerDevs Student
 import java.text.DecimalFormat;
 
 public class Product {
@@ -11,6 +11,28 @@ public class Product {
     private int startingQuantity;
     private double gainedRevenue;
     private double remainingRevenue;
+
+
+    //Constructors
+    public Product(){
+        setName("");
+        setPrice(0.00);
+        setStartingQuantity(0);
+    }
+
+    public Product(String name,double price, int quantity){
+        setName(name);
+        setPrice(price);
+        setStartingQuantity(quantity);
+    }
+
+
+
+
+
+
+
+
 
     //Decimal pattern to display dollars value
     private static DecimalFormat df = new DecimalFormat("0.00");
@@ -104,3 +126,4 @@ public class Product {
     }
 
 }
+//AS SE Saimer Nieves - CareerDevs Student

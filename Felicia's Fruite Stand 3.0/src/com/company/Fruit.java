@@ -1,17 +1,14 @@
 package com.company;
-
+//AS SE Saimer Nieves - CareerDevs Student
 public class Fruit extends Product{
 
     //Contructors
     public Fruit(){
-        setName("");
-        setPrice(0.00);
-        setStartingQuantity(0);
+        super();
     }
 
     public Fruit(String name,double price, int quantity){
-        setName(name);
-        setPrice(price);
-        setStartingQuantity(quantity);
+        super(name,price,quantity);
     }
 }
+//AS SE Saimer Nieves - CareerDevs Student
