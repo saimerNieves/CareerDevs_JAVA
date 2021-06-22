@@ -12,7 +12,7 @@ public class Main {
         BufferedReader buff = new BufferedReader( new InputStreamReader(System.in));
         int arraySize = Integer.parseInt( buff.readLine().trim());
 
-        String[] numArray = new String[arraySize];
+        String[] numArray ;
 
 
         String all_numbers_input = buff.readLine().trim();
