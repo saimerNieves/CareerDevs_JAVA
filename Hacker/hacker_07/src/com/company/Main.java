@@ -1,5 +1,5 @@
 package com.company;
-
+//Saimer Nieves
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException{
 	// write your code here
 
+        System.out.println("This is a string to test a push");
         BufferedReader buff = new BufferedReader( new InputStreamReader(System.in));
         int arraySize = Integer.parseInt( buff.readLine().trim());
 
