@@ -38,7 +38,7 @@ public class Main {
 
         for (int i = 0; i < phoneNumberDictionary.size(); i++){
 
-            System.out.print(keyArray + " " + valueArray[i]);
+            System.out.print(keyArray + " " + valueArray);
 
         }
 
