@@ -31,12 +31,18 @@ public class Main {
             phoneNumberDictionary.put(name_Key,phoneNumber_Value);
         }
 
-        String keyArray =  phoneNumberDictionary.keySet().toString();
+        Object keyArray = phoneNumberDictionary.keySet().toArray();
 
-        String valueArray = phoneNumberDictionary.values().toString();
+        Object valueArray = phoneNumberDictionary.values().toArray();
 
-        System.out.print(keyArray + " ");
-        System.out.println();
+
+        for (int i = 0; i < phoneNumberDictionary.size(); i++){
+
+            System.out.print(keyArray + " " + valueArray[i]);
+
+        }
+
+
 
 
 
