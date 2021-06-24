@@ -7,10 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Array;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -22,45 +19,60 @@ public class Main {
         Map<String,String> phoneNumberDictionary = new HashMap<>();
 
         int input_length = Integer.parseInt( buff.readLine().trim());
+
         for (int i = 0 ; i < input_length; i++){
 
             String[] key_value_Inputed = buff.readLine().trim().split(" ");
+
             String name_Key = key_value_Inputed[0];
+
             String phoneNumber_Value = key_value_Inputed[1];
 
             phoneNumberDictionary.put(name_Key,phoneNumber_Value);
         }
 
-        Object keyArray = phoneNumberDictionary.keySet().toArray();
 
-        Object valueArray = phoneNumberDictionary.values().toArray();
+        ArrayList<String> data_Keys = new ArrayList<>(phoneNumberDictionary.keySet());
+
+        ArrayList<String> data_values =new ArrayList<> (phoneNumberDictionary.values());
+
+//        System.out.println(data_Keys.contains("saimer"));
 
 
-        for (int i = 0; i < phoneNumberDictionary.size(); i++){
+        for (int i = 0; i < input_length; i++){
 
-            System.out.print(keyArray + " " + valueArray);
+
+            String searching_str = buff.readLine().toLowerCase().trim();
+
+            for (int j = 0 ; j < phoneNumberDictionary.size(); j++){
+
+
+
+                String oneKey = data_Keys.get(j);
+
+                if(oneKey.equals(searching_str)){
+                    System.out.print( data_Keys.get(j) + "=");
+                    System.out.println( data_values.get(j));
+                    break;
+                }
+                else{
+
+                    if( j == (phoneNumberDictionary.size() - 1)){
+
+                        System.out.println("Not found");
+                    }
+                }
+
+
+            }
+
 
         }
 
 
 
-
-
-
         buff.close();
-        //Phone number map
-//
-//        Map<String, String> phoneNumberMap = new HashMap<>();
-//        phoneNumberMap.put("Saimer","401-999-9999");
-//        phoneNumberMap.put("Luis","498-888-5415");
-//
-//        System.out.println( phoneNumberMap.get("Saimer"));
-//
-//        System.out.println( phoneNumberMap.keySet());
-//
-//        System.out.println(phoneNumberMap.values());
-//
-//        System.out.println(phoneNumberMap.size());
+
 
     }
 }
