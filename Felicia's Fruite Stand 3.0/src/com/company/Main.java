@@ -28,8 +28,8 @@ public class Main {
 //                }
                 switch (type.toLowerCase()){
                     case "meat" :
-                        String isInstance_Meat_str =  String.valueOf (product_list.get(i) instanceof Meat);
-                        switch (isInstance_Meat_str){
+
+                        switch (String.valueOf (product_list.get(i) instanceof Meat)){
                             case "true":
                                 System.out.println(product_list.get(i));
                                 break;
@@ -37,8 +37,8 @@ public class Main {
                         break;
 
                     case "fruit":
-                        String isInstance_Fruit_str = String.valueOf( product_list.get(i) instanceof Fruit );
-                        switch (isInstance_Fruit_str){
+
+                        switch (String.valueOf( product_list.get(i) instanceof Fruit )){
                             case "true":
                                 System.out.println(product_list.get(i));
                                 break;
