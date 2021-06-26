@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fead9d68-f176-4639-80ee-8b34a1e9d98d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Hacker/hacker_08/out/production/hacker_08/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Hacker/hacker_08/out/production/hacker_08/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hacker/hacker_08/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hacker/hacker_08/src/com/company/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="fead9d68-f176-4639-80ee-8b34a1e9d98d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
