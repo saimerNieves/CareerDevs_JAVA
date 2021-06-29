@@ -35,7 +35,14 @@ public class Dog extends Animal{
     //Method
     @Override
     public String speak(){
-        return "Bark Bark";
+
+        if(this.getNoise().equals("")){
+            return "Bark Bark";
+        }
+        else {
+            return this.getNoise();
+        }
+
     }
 
 

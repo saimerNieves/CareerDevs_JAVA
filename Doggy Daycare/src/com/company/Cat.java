@@ -8,6 +8,7 @@ public class Cat extends Animal{
     public boolean isAggressive;
 
 
+
     //Constructors
     public Cat(){
         super();
@@ -29,7 +30,18 @@ public class Cat extends Animal{
     @Override
     public String speak(){
 
-        return "meow meow";
+        if(this.getNoise().equals("")){
+            return "meow meow";
+        }
+        else{
+            return getNoise();
+        }
+
     }
+
+
+
+
+
 
 }
