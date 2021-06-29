@@ -49,9 +49,21 @@ public class Animal {
 
     public String toString(){
 
-        return this.getClass().getSimpleName() + " Names: " + this.name + ", Size: " +  this.size + ", isFixed: " + this.isFixed + ", Legs: " + this.legs + ", Born in America: " + this.isBornInAmerica  ;
-
-
+        return this.getClass().getSimpleName() + " Name: " + this.name + ", Size: " +  this.size + ", isFixed: " + this.isFixed + ", Legs: " + this.legs + ", Born in America: " + this.isBornInAmerica  ;
     }
+
+    public String toStringDog(){
+
+        return "Im a dog and my Name is " + this.name +". My size is " + this.size + ". Nice to meet you !  " + this.getNoise();
+    }
+
+
+    public String toStringCat(){
+
+        return "Im a Cat and I am very Sneaky.  Name is " + this.name +". My size is " + this.size + ". I Sleep all day! " + this.getNoise();
+    }
+
+
+
 
 }
