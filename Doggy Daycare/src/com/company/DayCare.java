@@ -4,26 +4,33 @@ import java.util.ArrayList;
 
 public class DayCare {
 
-    public static void addAnimal(Animal animal_input, ArrayList arrayList_input){
+    ArrayList<Animal> animalList = new ArrayList<>();
+
+    public  void addAnimal(Animal animal_input){
         try{
-            arrayList_input.add(animal_input);
+            animalList.add(animal_input);
         }catch (Exception e){
             System.out.println("Error from your AddAnimal Function");
         }
 
     }
 
-    public static void displayAnimals(ArrayList<Animal> animalList){
+    public void displayAnimals(){
         try{
             for (int i = 0; i < animalList.size(); i++){
 
                 if(animalList.get(i).getClass().getSimpleName().equals("Dog")){
-                    System.out.println(animalList.get(i).toStringDog());
+
+                    Dog dog = (Dog) animalList.get(i);
+                    System.out.println( "Im a dog and my Name is " + dog.name +". My size is " + dog.size + ". Nice to meet you !  " + dog.getNoise());
                 }
                 else if(animalList.get(i).getClass().getSimpleName().equals("Cat")){
-                    System.out.println(animalList.get(i).toStringCat());
+
+                    Cat cat = (Cat) animalList.get(i);
+                    System.out.println( "Im a Cat and I am very Sneaky.  Name is " + cat.name +". My size is " + cat.size + ". I Sleep all day! " + cat.getNoise() + " my pattern is " + cat.pattern);
                 }
                 else{
+
                     System.out.println(animalList.get(i)); // if is not cats or dogs print as any regular animal using default toString
                 }
 
@@ -35,9 +42,9 @@ public class DayCare {
         }
     }
 
-    public static void removeAnimal(String name_input, ArrayList<Animal> animalList_input){
+    public  void removeAnimal(String name_input){
 
-        for (int i = 0 ; i < animalList_input.size(); i++){
+        for (int i = 0 ; i < animalList.size(); i++){
 
 //            animalList_input.removeIf(innerElement -> innerElement.name.equals(name_input));
 
@@ -47,9 +54,9 @@ public class DayCare {
 //                    break;
 //                }
 //            }
-            if(  animalList_input.get(i).name.equals(name_input)){
+            if(  animalList.get(i).name.equals(name_input)){
 
-                animalList_input.remove(i--);
+                animalList.remove(i--);
                 break;
             }
         }
