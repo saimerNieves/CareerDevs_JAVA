@@ -1,5 +1,7 @@
 package com.company;
 
+
+//Saimer Nieves Hacker 19
 import java.util.Scanner;
 
 public class Main {
@@ -16,3 +18,5 @@ public class Main {
         System.out.println(sum);
     }
 }
+
+//End of Main Class
