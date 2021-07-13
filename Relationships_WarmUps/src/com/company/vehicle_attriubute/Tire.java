@@ -4,8 +4,8 @@ public class Tire {
 
     //Fields
 
-    int diameter;
-    int pressure;
+    public int diameter;
+    public int pressure;
 
 
     //Constuctor

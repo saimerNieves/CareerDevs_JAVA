@@ -14,7 +14,7 @@ public class Vehicle {
     public boolean isAir;
     public boolean isSpace;
     public int maxPassengers;
-    public ArrayList<Passenger> passengerArrayList;
+    public ArrayList<Passenger> passengerArrayList = new ArrayList<>();
 
 
     //Constructors

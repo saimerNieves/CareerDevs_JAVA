@@ -4,7 +4,7 @@ public class Passenger {
 
     //Fields
 
-    String name;
+    public String name;
     public int weight;
 
 

@@ -10,18 +10,19 @@ public class Boat extends Vehicle {
 
     //fields
 
-    String type = "Boat";
-    boolean isLand = false;
-    boolean isWater = true;
-    boolean isAir = false;
-    boolean isSpace = false;
-    Passenger passengers;
-    int maxLoad;//max for boat
+    public String type = "Boat";
+    public boolean isLand = false;
+    public boolean isWater = true;
+    public boolean isAir = false;
+    public boolean isSpace = false;
+    public Passenger passengers;
+    public int maxLoad;//max for boat
 
     //Constructor
 
-    public Boat(Engine boat_Engine){
-        super( boat_Engine);
+    public Boat(Engine boat_Engine, int maxLoad){
+        this.engine = boat_Engine;
+        this.maxLoad = maxLoad;
     }
 
 
@@ -29,13 +30,14 @@ public class Boat extends Vehicle {
     @Override
     public void addPassenger(Passenger newPassenger){
 
-        if(checkWeight(getPassengers()) < this.maxLoad) {
+        if((checkWeight(getPassengers()) + newPassenger.weight) < this.maxLoad) {
+
 
             this.passengerArrayList.add(newPassenger);
         }
         else {
 
-            System.out.println( "VEHICLE IS FULL");
+            System.out.println( "Boat IS FULL");
         }
 
     }

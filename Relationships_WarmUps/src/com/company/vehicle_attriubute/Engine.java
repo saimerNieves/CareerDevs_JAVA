@@ -4,9 +4,9 @@ public class Engine {
 
     //fields
 
-    String type;
-    boolean isOn;
-    int fuel;
+    public String type;
+    public boolean isOn;
+    public int fuel;
 
 
     //Constructor

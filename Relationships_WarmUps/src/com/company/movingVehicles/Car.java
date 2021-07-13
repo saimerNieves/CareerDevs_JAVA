@@ -10,23 +10,23 @@ public class Car extends Vehicle{
 
     //Fields
 
-    String type = "Car";
-    boolean isLand = true;
-    boolean isWater = false;
-    boolean isAir = false;
-    boolean isSpace = false;
-    Passenger passengers;
-    public ArrayList<Tire> tires;
+    //TODO Move to construcors
+    public boolean isLand = true;
+    public boolean isWater = false;
+    public boolean isAir = false;
+    public boolean isSpace = false;
+    public Passenger passengers;
+    public ArrayList<Tire> tires = new ArrayList<>();
 
 
     //Constructor
 
-    public Car(Engine vehicle_Engine, ArrayList<Tire> tires , int vehicle_maxPassenger){
+    //TODO use parent constructor Super()
+    public Car(Engine vehicle_Engine, int vehicle_maxPassenger){
 
+        this.type = "car";
         this.engine = vehicle_Engine;
         this.maxPassengers = vehicle_maxPassenger;
-        this.tires = tires;
-
 
     }
 

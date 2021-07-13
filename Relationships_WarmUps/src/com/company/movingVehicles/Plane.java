@@ -10,14 +10,15 @@ public class Plane extends Vehicle {
 
     //fields
 
-    String type = "Plane";
-    boolean isLand = false;
-    boolean isWater = false;
-    boolean isAir = true;
-    boolean isSpace = false;
-    Passenger passengers;
+    //TODO make sure to take away these fields because they are already inhertied
+    public String type = "Plane";
+    public boolean isLand = false;
+    public boolean isWater = false;
+    public boolean isAir = true;
+    public boolean isSpace = false;
+    public Passenger passengers;
     public ArrayList<Tire> tires;
-    boolean isLanding;
+    public boolean isLanding;
 
 
     //Constructor
