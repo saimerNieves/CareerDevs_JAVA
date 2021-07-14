@@ -4,10 +4,12 @@ import com.company.*;
 import com.company.vehicle_attriubute.*;
 import java.util.ArrayList;
 
+//Saimer Nieves
 
 public class Plane extends Vehicle {
 
     //fields
+    //
 
     //TODO make sure to take away these fields because they are already inhertied
     public ArrayList<Tire> tires = new ArrayList<>();
