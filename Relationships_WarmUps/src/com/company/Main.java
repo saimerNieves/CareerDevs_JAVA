@@ -21,11 +21,11 @@ public class Main {
 
         //Car
         //TODO Add tires using add tires method
-//        ArrayList<Tire> malibuTires = new ArrayList<>();
-//        malibuTires.add(frontLeft);
-//        malibuTires.add(frontRight);
-//        malibuTires.add(backLeft);
-//        malibuTires.add(backRight);
+        ArrayList<Tire> malibuTires = new ArrayList<>();
+        malibuTires.add(frontLeft);
+        malibuTires.add(frontRight);
+        malibuTires.add(backLeft);
+        malibuTires.add(backRight);
 
 
         Car malibu = new Car(electricEngine,2);
@@ -58,16 +58,16 @@ public class Main {
         Passenger saimer = new Passenger("saimer", 150);
         Passenger batman = new Passenger("batman", 75);
 
-//        malibu.addPassenger(sainier);
-//        malibu.addPassenger(saimer);
-//        malibu.addPassenger(batman);
+        malibu.addPassenger(sainier);
+        malibu.addPassenger(saimer);
+        malibu.addPassenger(batman);
 
-//        yatch.addPassenger(sainier);
-//        yatch.addPassenger(batman);
+        yatch.addPassenger(sainier);
+        yatch.addPassenger(batman);
 
-//        boeingPlane.addPassenger(sainier);
-//        boeingPlane.addPassenger(batman);
-//        boeingPlane.addPassenger(saimer);
+        boeingPlane.addPassenger(sainier);
+        boeingPlane.addPassenger(batman);
+        boeingPlane.addPassenger(saimer);
 
         System.out.println(boeingPlane.engine.isOn);
         boeingPlane.engine.turnOn();
