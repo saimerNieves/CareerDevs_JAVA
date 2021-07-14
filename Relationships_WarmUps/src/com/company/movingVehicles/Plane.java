@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 //Saimer Nieves
 
+// plane class
+
 public class Plane extends Vehicle {
 
     //fields
