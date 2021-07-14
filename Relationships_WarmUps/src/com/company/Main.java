@@ -74,13 +74,13 @@ public class Main {
 //        boeingPlane.engine.turnOff();
         System.out.println(boeingPlane.engine.isOn);
 
-//        System.out.println(yatch.passengerArrayList.size());
-//        yatch.addPassenger(saimer);
-//        yatch.addPassenger(sainier);
-//        System.out.println(yatch.passengerArrayList.size());
-//        yatch.removePassenger(sainier);
-//        yatch.removePassenger(saimer);
-//        System.out.println(yatch.passengerArrayList.size());
+        System.out.println(yatch.passengerArrayList.size());
+        yatch.addPassenger(saimer);
+        yatch.addPassenger(sainier);
+        System.out.println(yatch.passengerArrayList.size());
+        yatch.removePassenger(sainier);
+        yatch.removePassenger(saimer);
+        System.out.println(yatch.passengerArrayList.size());
 
         System.out.println(boeingPlane.tires.size());
 
