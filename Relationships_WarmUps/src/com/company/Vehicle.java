@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class Vehicle {
 
     //Fields
-
     public Engine engine;
     public String type;
     public boolean isLand;
@@ -19,30 +18,26 @@ public class Vehicle {
 
     //Constructors
 
-    public Vehicle(){
-
-
-    }
-
     public Vehicle(Engine vehicle_Engine){
 
         this.engine = vehicle_Engine;
-
     }
 
+    public Vehicle(Engine vehicle_Engine, int vehicle_maxPassenger){
 
+        this.engine = vehicle_Engine;
+        this.maxPassengers = vehicle_maxPassenger;
+    }
 
     public Vehicle(Engine vehicle_Engine, String vehicle_type, int vehicle_maxPassenger){
 
         this.engine = vehicle_Engine;
         this.type = vehicle_type;
         this.maxPassengers = vehicle_maxPassenger;
-
-
     }
 
-    //Methods
 
+    //Methods
     public void turnOn(){
 
         this.engine.turnOn();
@@ -51,7 +46,6 @@ public class Vehicle {
     public void turnOff(){
 
         this.engine.turnOff();
-
     }
 
     public void addPassenger(Passenger newPassenger){
@@ -64,10 +58,6 @@ public class Vehicle {
 
             System.out.println( "VEHICLE IS FULL");
         }
-
-
-
-
     }
 
     public void removePassenger(Passenger passenger){
@@ -86,5 +76,4 @@ public class Vehicle {
     public ArrayList<Passenger> getPassengers(){
         return passengerArrayList;
     }
-
 }

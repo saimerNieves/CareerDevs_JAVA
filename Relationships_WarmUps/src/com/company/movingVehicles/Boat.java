@@ -9,20 +9,20 @@ import java.util.ArrayList;
 public class Boat extends Vehicle {
 
     //fields
-
-    public String type = "Boat";
-    public boolean isLand = false;
-    public boolean isWater = true;
-    public boolean isAir = false;
-    public boolean isSpace = false;
-    public Passenger passengers;
     public int maxLoad;//max for boat
 
     //Constructor
-
     public Boat(Engine boat_Engine, int maxLoad){
+
         this.engine = boat_Engine;
         this.maxLoad = maxLoad;
+
+        //Inherited Fields
+        this.type = "Boat";
+        this.isLand = false;
+        this.isWater = true;
+        this.isAir = false;
+        this.isSpace = false;
     }
 
 
@@ -32,14 +32,12 @@ public class Boat extends Vehicle {
 
         if((checkWeight(getPassengers()) + newPassenger.weight) < this.maxLoad) {
 
-
             this.passengerArrayList.add(newPassenger);
         }
         else {
 
             System.out.println( "Boat IS FULL");
         }
-
     }
 
 
@@ -52,11 +50,5 @@ public class Boat extends Vehicle {
             totalWeight += arrayOfPassengers.get(i).weight;
         }
         return totalWeight;
-
     }
-
-
-
-
-
 }

@@ -9,25 +9,22 @@ import java.util.ArrayList;
 public class Car extends Vehicle{
 
     //Fields
-
-    //TODO Move to construcors
-    public boolean isLand = true;
-    public boolean isWater = false;
-    public boolean isAir = false;
-    public boolean isSpace = false;
-    public Passenger passengers;
     public ArrayList<Tire> tires = new ArrayList<>();
 
 
     //Constructor
 
-    //TODO use parent constructor Super()
+
     public Car(Engine vehicle_Engine, int vehicle_maxPassenger){
 
-        this.type = "car";
-        this.engine = vehicle_Engine;
-        this.maxPassengers = vehicle_maxPassenger;
+        super( vehicle_Engine,  vehicle_maxPassenger);
 
+        //Parent attributes
+        this.type = "car";
+        this.isLand = true;
+        this.isWater = false;
+        this.isAir = false;
+        this.isSpace = false;
     }
 
 
@@ -57,6 +54,6 @@ public class Car extends Vehicle{
         }
     }
 
-    public void replaceTire(){}
+//    public void replaceTire(){}
 
 }

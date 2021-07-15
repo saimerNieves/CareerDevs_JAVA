@@ -11,9 +11,6 @@ import java.util.ArrayList;
 public class Plane extends Vehicle {
 
     //fields
-    //
-
-    //TODO make sure to take away these fields because they are already inhertied
     public ArrayList<Tire> tires = new ArrayList<>();
     public boolean isLanding;
 
@@ -21,11 +18,11 @@ public class Plane extends Vehicle {
     //Constructor
     public Plane(Engine plane_engine, ArrayList<Tire> tires, int vehicle_maxPassenger ){
 
-        this.engine = plane_engine;
-        this.maxPassengers = vehicle_maxPassenger;
-        this.tires = tires;
+        super( plane_engine,  vehicle_maxPassenger);
+
 
         //Default parent setting fields
+        this.tires = tires;
         this.type = "Plane";
         this.isLand = false;
         this.isWater = false;
