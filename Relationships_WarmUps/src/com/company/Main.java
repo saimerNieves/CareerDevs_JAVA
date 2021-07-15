@@ -9,6 +9,8 @@ import com.company.vehicle_attriubute.*;
 //importing arraylist
 import java.util.ArrayList;
 
+
+//create instances of vehicles using is has relationship
 public class Main {
 
     public static void main(String[] args) {
