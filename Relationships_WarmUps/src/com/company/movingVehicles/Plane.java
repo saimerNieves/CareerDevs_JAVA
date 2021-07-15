@@ -20,7 +20,6 @@ public class Plane extends Vehicle {
 
         super( plane_engine,  vehicle_maxPassenger);
 
-
         //Default parent setting fields
         this.tires = tires;
         this.type = "Plane";
@@ -59,10 +58,5 @@ public class Plane extends Vehicle {
     }
 
 
-
-    //TODO this is a bonus make sure you complete it
-    public void replaceTire(){
-
-    }
 
 }
