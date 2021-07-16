@@ -2,7 +2,7 @@ package com.company;
 
 public class Die {
 
-
+    // TODO Finish creating DIE class from recordings at youtube
     //Fields
     public int number_Of_Sides; // number of sides
     public int face_Up_Value; // faceUpValue
